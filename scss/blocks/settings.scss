@@ -80,9 +80,10 @@ body {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  padding: 8px 55px;
-  border-radius: 4px;
-  font-weight: bold;
+  padding: 8px 30px;
+  background-color: #E9F5E1;
+  border-radius: 3px;
+  font-weight: 600;
   font-size: 18px;
   border: none;
   outline: none;
@@ -90,22 +91,13 @@ body {
   user-select: none;
   position: relative;
   overflow: hidden;
+  transition: 0.2s;
   &--telegram {
     padding: 17px 66px 14px 24px;
+    border-radius: 4px;
+    font-weight: bold;
     background: $ligr;
     color: #fff;
-    &:before {
-      content: '';
-      display: block;
-      background: linear-gradient(to right, #0E9234, #53B336);
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      opacity: 0;
-      transition: 0.2s;
-    }
     &:after {
       content: '';
       display: block;
@@ -116,30 +108,43 @@ body {
       top: -1px;
       right: -1px;
     }
-    .btn__text {
-      position: relative;
-      z-index: 2;
-    }
-    .btn__circle {
-      display: block;
-      width: 118px;
-      height: 118px;
-      border-radius: 100%;
-      background-color: #2EA3E6;
-      position: absolute;
-      top: -5px;
-      right: -30px;
-    }
-    .btn__icon {
-      position: absolute;
-      z-index: 2;
-      top: 17px;
-      right: 33px;
-    }
-    &:hover {
-      &:before {
-        opacity: 1;
-      }
+  }
+  &__text {
+    position: relative;
+    z-index: 2;
+  }
+  &__circle {
+    display: block;
+    width: 118px;
+    height: 118px;
+    border-radius: 100%;
+    background-color: #2EA3E6;
+    position: absolute;
+    top: -5px;
+    right: -30px;
+  }
+  &__icon {
+    position: absolute;
+    z-index: 2;
+    top: 17px;
+    right: 33px;
+  }
+  &:before {
+    content: '';
+    display: block;
+    background: linear-gradient(to right, #0E9234, #53B336);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: 0.2s;
+  }
+  &:hover {
+    color: #fff;
+    &:before {
+      opacity: 1;
     }
   }
 }

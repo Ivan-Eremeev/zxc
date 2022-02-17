@@ -6841,9 +6841,10 @@ body.lock {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  padding: 8px 55px;
-  border-radius: 4px;
-  font-weight: bold;
+  padding: 8px 30px;
+  background-color: #E9F5E1;
+  border-radius: 3px;
+  font-weight: 600;
   font-size: 18px;
   border: none;
   outline: none;
@@ -6854,14 +6855,51 @@ body.lock {
   user-select: none;
   position: relative;
   overflow: hidden;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
 }
 .btn--telegram {
   padding: 17px 66px 14px 24px;
+  border-radius: 4px;
+  font-weight: bold;
   background: -o-linear-gradient(1.1deg, #6ABD36 -8.81%, #058E34 105.01%);
   background: linear-gradient(88.9deg, #6ABD36 -8.81%, #058E34 105.01%);
   color: #fff;
 }
-.btn--telegram:before {
+.btn--telegram:after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: -webkit-gradient(linear, right top, left bottom, color-stop(50%, #fff), color-stop(50.1%, transparent));
+  background: -o-linear-gradient(top right, #fff 50%, transparent 50.1%);
+  background: linear-gradient(to bottom left, #fff 50%, transparent 50.1%);
+  position: absolute;
+  top: -1px;
+  right: -1px;
+}
+.btn__text {
+  position: relative;
+  z-index: 2;
+}
+.btn__circle {
+  display: block;
+  width: 118px;
+  height: 118px;
+  border-radius: 100%;
+  background-color: #2EA3E6;
+  position: absolute;
+  top: -5px;
+  right: -30px;
+}
+.btn__icon {
+  position: absolute;
+  z-index: 2;
+  top: 17px;
+  right: 33px;
+}
+.btn:before {
   content: "";
   display: block;
   background: -webkit-gradient(linear, left top, right top, from(#0E9234), to(#53B336));
@@ -6877,39 +6915,10 @@ body.lock {
   -o-transition: 0.2s;
   transition: 0.2s;
 }
-.btn--telegram:after {
-  content: "";
-  display: block;
-  width: 20px;
-  height: 20px;
-  background: -webkit-gradient(linear, right top, left bottom, color-stop(50%, #fff), color-stop(50.1%, transparent));
-  background: -o-linear-gradient(top right, #fff 50%, transparent 50.1%);
-  background: linear-gradient(to bottom left, #fff 50%, transparent 50.1%);
-  position: absolute;
-  top: -1px;
-  right: -1px;
+.btn:hover {
+  color: #fff;
 }
-.btn--telegram .btn__text {
-  position: relative;
-  z-index: 2;
-}
-.btn--telegram .btn__circle {
-  display: block;
-  width: 118px;
-  height: 118px;
-  border-radius: 100%;
-  background-color: #2EA3E6;
-  position: absolute;
-  top: -5px;
-  right: -30px;
-}
-.btn--telegram .btn__icon {
-  position: absolute;
-  z-index: 2;
-  top: 17px;
-  right: 33px;
-}
-.btn--telegram:hover:before {
+.btn:hover:before {
   opacity: 1;
 }
 
@@ -7009,6 +7018,13 @@ body.lock {
   margin-bottom: 51px;
   color: #032305;
 }
+@media (max-width: 767.98px) {
+  .welcome {
+    padding-top: 50px;
+    padding-bottom: 25px;
+  }
+}
+
 .calc {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -7147,5 +7163,91 @@ body.lock {
 @media (max-width: 767.98px) {
   .calc__img {
     display: none;
+  }
+}
+
+.description {
+  padding: 70px 0;
+  position: relative;
+  z-index: 2;
+}
+.description__title {
+  font-weight: bold;
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+.description__text {
+  margin-bottom: 24px;
+  line-height: 1.5;
+}
+.description__text p {
+  margin: 20px 0;
+}
+.description .btn {
+  width: 100%;
+}
+.description__sticker {
+  display: inline-block;
+  padding: 10px 60px 10px 30px;
+  border-radius: 20px 20px 5px 20px;
+  background-color: #0088CC;
+  font-weight: 500;
+  color: #fff;
+  position: relative;
+}
+.description__sticker .description__time {
+  font-size: 10px;
+}
+.description__block {
+  padding: 15px 50px 15px 15px;
+  background-color: #fff;
+  border-radius: 20px;
+  -webkit-box-shadow: 0px 8px 24px rgba(48, 55, 87, 0.12);
+  box-shadow: 0px 8px 24px rgba(48, 55, 87, 0.12);
+  position: relative;
+  z-index: 2;
+}
+.description__list {
+  font-weight: 500;
+  font-size: 15px;
+  color: #303757;
+}
+.description__list li {
+  margin: 10px 0;
+}
+.description__time {
+  position: absolute;
+  right: 10px;
+  bottom: 5px;
+}
+.description__img {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 2;
+}
+.description__circle {
+  width: 340px;
+  height: 340px;
+  border-radius: 100%;
+  background-color: #FAFAFA;
+  position: absolute;
+  top: -30px;
+  right: 50px;
+}
+@media (max-width: 767.98px) {
+  .description {
+    padding: 25px 0;
+  }
+  .description__img {
+    display: none;
+  }
+  .description__block {
+    width: 100%;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+  }
+  .description__sticker {
+    margin-left: auto;
   }
 }
