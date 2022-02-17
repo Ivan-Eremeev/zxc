@@ -6916,9 +6916,8 @@ body.lock {
 .circle {
   width: 740px;
   height: 740px;
-  background: rgba(72, 174, 54, 0.18);
-  -webkit-filter: blur(655px);
-  filter: blur(655px);
+  background: -o-radial-gradient(rgba(72, 174, 54, 0.18), transparent 70%);
+  background: radial-gradient(rgba(72, 174, 54, 0.18), transparent 70%);
   border-radius: 100%;
   position: absolute;
   top: 100px;
@@ -7058,6 +7057,7 @@ body.lock {
   padding: 0 15px;
   font-size: 14px;
   border: none;
+  background: transparent;
 }
 .calc__val {
   display: -webkit-box;

@@ -146,8 +146,7 @@ body {
 .circle {
   width: 740px;
   height: 740px;
-  background: rgba(72, 174, 54, 0.18);
-  filter: blur(655px);
+  background: radial-gradient(rgba(72, 174, 54, 0.18), transparent 70%);
   border-radius: 100%;
   position: absolute;
   top: 100px;
