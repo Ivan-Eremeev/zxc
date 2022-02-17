@@ -1,0 +1,69 @@
+extends blocks/base.pug
+
+block title 
+	title Главная
+
+block content
+
+	.page
+
+		include blocks/header.pug
+
+		
+		.content
+			.container.position-relative
+			
+				.circle
+
+				// welcome
+				.welcome.px-2
+					.row.align-items-center.gy-5
+						.col-lg-4
+							h1.welcome__title У вас большая ферма?
+							p.welcome__text У нас для Вас специальное предложение!
+							a(href="#").btn.btn--telegram 
+								.btn__text Подключиться через бота 
+								.btn__icon 
+									svg(width="23" height="19" viewBox="0 0 23 19" fill="none" xmlns="http://www.w3.org/2000/svg")
+										path(d="M21.9062 2.64062C22.1875 1.32812 21.4375 0.8125 20.5938 1.14062L1.9375 8.3125C0.671875 8.82812 0.71875 9.53125 1.75 9.85938L6.48438 11.3125L17.5469 4.375C18.0625 4 18.5781 4.23438 18.1562 4.5625L9.20312 12.625L8.875 17.5469C9.39062 17.5469 9.57812 17.3594 9.85938 17.0781L12.1562 14.8281L16.9844 18.3906C17.875 18.9062 18.5312 18.625 18.7656 17.5938L21.9062 2.64062Z" fill="white")
+								.btn__circle
+						.col-lg-8.col-xl-7.offset-xl-1
+							// calc
+							.calc
+								.calc__img 
+									img(src="img/calc.png", alt="")
+								.calc__block
+									.calc__top
+										.calc__title Калькулятор дохода
+										.row.mb-3.gy-3
+											.col-md-6 
+												.calc__text Цена электроэнергии 
+												.calc__input 
+													.calc__input-inp
+														input(type="text")
+													.calc__val RUB/kWH
+											.col-md-6
+												.calc__text Хешрейт
+												.calc__input 
+													.calc__input-inp
+														input(type="text")
+													.calc__val TH
+										div
+											.calc__text Период
+											.calc__period 
+												.calc__period-item Час
+												.calc__period-item.active День
+												.calc__period-item Неделя
+												.calc__period-item Месяц
+									.calc__result 
+										.calc__subtitle Ваш доход за месяц
+										.calc__value 
+											span.calc__num 0.01536000
+											span.calc__currency BTC
+											| ≈ 639.16 $ ≈ 47483.06 ₽
+										.calc__ps Примерные данные, основанные на профитности пула за 09.01
+							//	/calc
+				//	/welcome 
+
+			
+		include blocks/footer.pug

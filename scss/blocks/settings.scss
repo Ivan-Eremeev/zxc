@@ -1,0 +1,156 @@
+/* settings */
+html {
+  height: 100%;
+}
+a {
+  transition: .2s;
+  text-decoration: none;
+}
+button,
+input,
+textarea {
+  font-family: "Montserrat" ,sans-serif;
+  font-size: 15px;
+}
+body {
+  height: 100%;
+  min-width: 319px;
+  background-color: #fff;
+  font-family: "Montserrat" ,sans-serif;
+  font-size: 15px;
+  &.lock {
+    position: fixed;
+  }
+}
+.mobile-hide {
+  @include media-breakpoint-down(md) {
+    display: none !important;
+  }
+}
+.mobile-visible {
+  @include media-breakpoint-up(md) {
+    display: none !important;
+  }
+}
+.img-responsive {
+  position: relative;
+  overflow: hidden;
+  img {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  svg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  &:after {
+    content: '';
+    display: block;
+    padding-top: 56.25%;
+  }
+}
+*:-webkit-autofill {
+  -webkit-box-shadow: inset 0 0 0 50px #fff !important;
+}
+*::placeholder {
+  color: #a9a9a9;
+  opacity: 1;
+}
+.page {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: 
+    url(../img/bg.svg), 
+    linear-gradient(to bottom, #fff 70%, #E4F0DE);
+  background-size: 100% auto, auto;
+  background-position: left bottom, center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+.content {
+  flex-grow: 1;
+}
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 55px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  overflow: hidden;
+  &--telegram {
+    padding: 17px 66px 14px 24px;
+    background: $ligr;
+    color: #fff;
+    &:before {
+      content: '';
+      display: block;
+      background: linear-gradient(to right, #0E9234, #53B336);
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      opacity: 0;
+      transition: 0.2s;
+    }
+    &:after {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 20px;
+      background: linear-gradient(to bottom left, #fff 50%, transparent 50.1%);
+      position: absolute;
+      top: -1px;
+      right: -1px;
+    }
+    .btn__text {
+      position: relative;
+      z-index: 2;
+    }
+    .btn__circle {
+      display: block;
+      width: 118px;
+      height: 118px;
+      border-radius: 100%;
+      background-color: #2EA3E6;
+      position: absolute;
+      top: -5px;
+      right: -30px;
+    }
+    .btn__icon {
+      position: absolute;
+      z-index: 2;
+      top: 17px;
+      right: 33px;
+    }
+    &:hover {
+      &:before {
+        opacity: 1;
+      }
+    }
+  }
+}
+.circle {
+  width: 740px;
+  height: 740px;
+  background: rgba(72, 174, 54, 0.18);
+  filter: blur(655px);
+  border-radius: 100%;
+  position: absolute;
+  top: 100px;
+  left: -400px;
+}
+/* /settings */

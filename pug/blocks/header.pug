@@ -1,0 +1,32 @@
+// header
+header.header
+	.container 
+
+		.d-flex.align-items-center.justify-content-between.py-2.px-2.flex-wrap
+		
+			.d-flex.align-items-center.flex-wrap
+				a(href="#").header__logo
+					img(src="img/logo.svg", alt="")
+
+				.header__menu
+					nav 
+						ul.d-flex
+							li 
+								a(href="#") Помощь
+							li 
+								a(href="#") Тарифы
+
+			.header__lang 
+				img(src="img/rus_flag.png", alt="")
+				span Россия (RUS)
+				svg(width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg")
+					path(fill-rule="evenodd" clip-rule="evenodd" d="M8.60002 1.13602C8.28799 0.825837 7.78405 0.825837 7.47202 1.13602L4.60002 3.96802L1.76802 1.13602C1.45599 0.825837 0.95205 0.825837 0.64002 1.13602C0.48857 1.28623 0.403381 1.49071 0.403381 1.70402C0.403381 1.91733 0.48857 2.1218 0.64002 2.27202L4.03202 5.66402C4.18223 5.81547 4.38671 5.90066 4.60002 5.90066C4.81333 5.90066 5.01781 5.81547 5.16802 5.66402L8.60002 2.27202C8.75147 2.1218 8.83666 1.91733 8.83666 1.70402C8.83666 1.49071 8.75147 1.28623 8.60002 1.13602V1.13602Z" fill="#E6E6E6")
+
+		.header__banner
+			.d-flex.align-items-center.justify-content-between.flex-wrap
+				p
+					b У вас большая ферма? 
+					| У нас для Вас специальное предложение!
+				a(href="#") Получить предложение
+
+// /header

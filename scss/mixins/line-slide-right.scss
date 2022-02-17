@@ -1,0 +1,21 @@
+@mixin line-slide-right() {
+	position: relative;
+	&:after {
+		content: '';
+		display: block;
+		width: 100%;
+		max-width: 0;
+		height: 1px;
+		background-color: red;
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		transition: .5s;
+	}
+	&:hover {
+		&:after {
+			max-width: 500px;
+			transition: 1.5s;
+		}
+	}
+}

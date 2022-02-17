@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<title>Главная</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="keywords" content="">
+		<meta name="description" content="">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<div class="page">
+			<!-- header-->
+			<header class="header">
+				<div class="container"> 
+					<div class="d-flex align-items-center justify-content-between py-2 px-2 flex-wrap">
+						<div class="d-flex align-items-center flex-wrap"><a class="header__logo" href="#"><img src="img/logo.svg" alt=""></a>
+							<div class="header__menu">
+								<nav> 
+									<ul class="d-flex">
+										<li> <a href="#">Помощь</a></li>
+										<li> <a href="#">Тарифы</a></li>
+									</ul>
+								</nav>
+							</div>
+						</div>
+						<div class="header__lang"> <img src="img/rus_flag.png" alt=""><span>Россия (RUS)</span>
+							<svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M8.60002 1.13602C8.28799 0.825837 7.78405 0.825837 7.47202 1.13602L4.60002 3.96802L1.76802 1.13602C1.45599 0.825837 0.95205 0.825837 0.64002 1.13602C0.48857 1.28623 0.403381 1.49071 0.403381 1.70402C0.403381 1.91733 0.48857 2.1218 0.64002 2.27202L4.03202 5.66402C4.18223 5.81547 4.38671 5.90066 4.60002 5.90066C4.81333 5.90066 5.01781 5.81547 5.16802 5.66402L8.60002 2.27202C8.75147 2.1218 8.83666 1.91733 8.83666 1.70402C8.83666 1.49071 8.75147 1.28623 8.60002 1.13602V1.13602Z" fill="#E6E6E6"></path>
+							</svg>
+						</div>
+					</div>
+					<div class="header__banner">
+						<div class="d-flex align-items-center justify-content-between flex-wrap">
+							<p><b>У вас большая ферма? </b>У нас для Вас специальное предложение!</p><a href="#">Получить предложение</a>
+						</div>
+					</div>
+				</div>
+			</header>
+			<!-- /header-->
+			<div class="content">
+				<div class="container position-relative">
+					<div class="circle"></div>
+					<!-- welcome-->
+					<div class="welcome px-2">
+						<div class="row align-items-center gy-5">
+							<div class="col-lg-4">
+								<h1 class="welcome__title">У вас большая ферма?</h1>
+								<p class="welcome__text">У нас для Вас специальное предложение!</p><a class="btn btn--telegram" href="#"> 
+									<div class="btn__text">Подключиться через бота </div>
+									<div class="btn__icon"> 
+										<svg width="23" height="19" viewBox="0 0 23 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M21.9062 2.64062C22.1875 1.32812 21.4375 0.8125 20.5938 1.14062L1.9375 8.3125C0.671875 8.82812 0.71875 9.53125 1.75 9.85938L6.48438 11.3125L17.5469 4.375C18.0625 4 18.5781 4.23438 18.1562 4.5625L9.20312 12.625L8.875 17.5469C9.39062 17.5469 9.57812 17.3594 9.85938 17.0781L12.1562 14.8281L16.9844 18.3906C17.875 18.9062 18.5312 18.625 18.7656 17.5938L21.9062 2.64062Z" fill="white"></path>
+										</svg>
+									</div>
+									<div class="btn__circle"></div></a>
+							</div>
+							<div class="col-lg-8 col-xl-7 offset-xl-1">
+								<!-- calc-->
+								<div class="calc">
+									<div class="calc__img"> <img src="img/calc.png" alt=""></div>
+									<div class="calc__block">
+										<div class="calc__top">
+											<div class="calc__title">Калькулятор дохода</div>
+											<div class="row mb-3 gy-3">
+												<div class="col-md-6"> 
+													<div class="calc__text">Цена электроэнергии </div>
+													<div class="calc__input"> 
+														<div class="calc__input-inp">
+															<input type="text">
+														</div>
+														<div class="calc__val">RUB/kWH</div>
+													</div>
+												</div>
+												<div class="col-md-6">
+													<div class="calc__text">Хешрейт</div>
+													<div class="calc__input"> 
+														<div class="calc__input-inp">
+															<input type="text">
+														</div>
+														<div class="calc__val">TH</div>
+													</div>
+												</div>
+											</div>
+											<div>
+												<div class="calc__text">Период</div>
+												<div class="calc__period"> 
+													<div class="calc__period-item">Час</div>
+													<div class="calc__period-item active">День</div>
+													<div class="calc__period-item">Неделя</div>
+													<div class="calc__period-item">Месяц</div>
+												</div>
+											</div>
+										</div>
+										<div class="calc__result"> 
+											<div class="calc__subtitle">Ваш доход за месяц</div>
+											<div class="calc__value"> <span class="calc__num">0.01536000</span><span class="calc__currency">BTC</span>≈ 639.16 $ ≈ 47483.06 ₽</div>
+											<div class="calc__ps">Примерные данные, основанные на профитности пула за 09.01</div>
+										</div>
+									</div>
+								</div>
+								<!--	/calc-->
+							</div>
+						</div>
+					</div>
+					<!--	/welcome -->
+				</div>
+			</div>
+			<!-- footer-->
+			<footer class="footer"> 
+				<div class="container"> </div>
+			</footer>
+			<!-- /footer-->
+		</div>
+	</body>
+</html>

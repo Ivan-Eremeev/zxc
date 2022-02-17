@@ -1,0 +1,64 @@
+@import 'mixins';
+
+@include reset(); // Сброс стилей
+
+// Переменные для кастомизации Bootstrap 5
+$grid-gutter-width: 20px; // Отступы между колонками
+$grid-columns: 12; // Колличество колонок
+$grid-breakpoints: ( // Брейкпоинты
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+) !default;
+$container-max-widths: ( // Максимальная ширина контейнера
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px
+) !default;
+$gutter: $grid-gutter-width; // Переменная для задания отступов равных междуколоночным
+
+$gutters: (
+  0: 0,
+  1: $grid-gutter-width * 0.25,
+  2: $grid-gutter-width * 0.5,
+  3: $grid-gutter-width * 1,
+  4: $grid-gutter-width * 1.5,
+  5: $grid-gutter-width * 2,
+);
+$spacers: (
+  0: 0,
+  1: $grid-gutter-width * 0.25,
+  2: $grid-gutter-width * 0.5,
+  3: $grid-gutter-width * 1,
+  4: $grid-gutter-width * 1.5,
+  5: $grid-gutter-width * 2,
+);
+
+@import 'bootstrap/bootstrap'; // Подключение бутстрап
+
+// Шрифты
+@include font-face("Montserrat", "../fonts/montserrat/montserrat-v23-latin_cyrillic-regular", normal, normal);
+@include font-face("Montserrat", "../fonts/montserrat/montserrat-v23-latin_cyrillic-500", 500, normal);
+@include font-face("Montserrat", "../fonts/montserrat/montserrat-v23-latin_cyrillic-600", 600, normal);
+@include font-face("Montserrat", "../fonts/montserrat/montserrat-v23-latin_cyrillic-700", bold, normal);
+
+// Цвета
+$green: #35A535;
+$ligr: linear-gradient(88.9deg, #6ABD36 -8.81%, #058E34 105.01%);
+
+// Подключение файлов
+@import 'blocks/settings';
+@import 'blocks/header';
+@import 'blocks/welcome';
+@import 'blocks/calc';
+// @import 'hamburgers/hamburgers';
+// @import 'blocks/menu';
+// @import 'blocks/accordion';
+// @import 'blocks/modal';
+// @import 'blocks/tooltipster-noir';
+// @import 'blocks/tabs';

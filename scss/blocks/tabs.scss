@@ -1,0 +1,17 @@
+#tabs_triggers {
+  > * {
+    user-select: none;
+    cursor: pointer;
+    &.active {
+      border-bottom: 1px solid #000;
+    }
+  }
+}
+#tabs_content {
+  > * {
+    display: none;
+  }
+  > .open {
+    display: block;
+  }
+}
