@@ -1,0 +1,30 @@
+.advantages {
+  padding: 70px 0;
+  &__item {
+    text-align: center;
+  }
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    margin-bottom: 45px;
+  }
+  &__title {
+    font-weight: 600;
+    font-size: 24px;
+    background: $ligr;
+    background-clip: text;
+    color: transparent;
+    margin-bottom: 17px;
+  }
+  &__text {
+    line-height: 1.5;
+  }
+  @include media-breakpoint-down(md) {
+    padding: 25px 0;
+    &__icon {
+      margin-bottom: 20px;
+    }
+  }
+}
