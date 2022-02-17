@@ -1,14 +1,21 @@
 .header {
   &__logo {
     max-width: 160px;
+    flex-shrink: 0;
     margin-right: 130px;
+    img {
+      display: block;
+    }
   }
   &__menu {
     margin: 10px 0;
+    margin-right: 30px;
     ul {
       margin-left: -30px;
       li {
         margin-left: 30px;
+        margin-top: 5px;
+        margin-bottom: 5px;
       }
       a {
         color: #000;
