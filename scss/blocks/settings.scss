@@ -110,8 +110,14 @@ body {
     }
   }
   &__text {
+    display: flex;
+    align-items: center;
     position: relative;
     z-index: 2;
+    img {
+      width: 20px;
+      margin-right: 10px;
+    }
   }
   &__circle {
     display: block;

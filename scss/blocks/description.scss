@@ -18,13 +18,18 @@
     width: 100%;
   }
   &__sticker {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
     padding: 10px 60px 10px 30px;
     border-radius: 20px 20px 5px 20px;
     background-color: #0088CC;
     font-weight: 500;
     color: #fff;
     position: relative;
+    img {
+      width: 20px;
+      margin-right: 10px;
+    }
     .description__time {
       font-size: 10px;
     }
@@ -43,6 +48,11 @@
     color: #303757;
     li {
       margin: 10px 0;
+      img {
+        width: 20px;
+        margin-right: 10px;
+        vertical-align: middle;
+      }
     }
   }
   &__time {
